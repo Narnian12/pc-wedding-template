@@ -1,24 +1,28 @@
-import { FC } from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Event from './pages/Event';
+import Gallery from './pages/Gallery';
+import Rsvp from './pages/Rsvp';
 
-const App: FC = () => {
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/">
+          <Home />
+        </Route>
+        <Route path="/event">
+          <Event />
+        </Route>
+        <Route path="/gallery">
+          <Gallery />
+        </Route>
+        <Route path="/rsvp">
+          <Rsvp />
+        </Route>
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
