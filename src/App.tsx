@@ -1,27 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Event from './pages/Event';
-import Gallery from './pages/Gallery';
-import Rsvp from './pages/Rsvp';
+import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/">
-          <Home />
-        </Route>
-        <Route path="/event">
-          <Event />
-        </Route>
-        <Route path="/gallery">
-          <Gallery />
-        </Route>
-        <Route path="/rsvp">
-          <Rsvp />
-        </Route>
-      </Routes>
-    </Router>
+    <>
+      <h1>Hello</h1>
+      <Link to="/event">Event</Link>
+      <Link to="/gallery">Gallery</Link>
+      <Link to="/home">Home</Link>
+      <Link to="/rsvp">RSVP</Link>
+    </>
   );
 }
 
