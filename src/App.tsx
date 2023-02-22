@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
+import styled from "@emotion/styled";
 
 function App() {
   return (
@@ -18,11 +17,31 @@ function App() {
             aria-label="menu"
             sx={{ mr: 2 }}
           ></IconButton>
-          <Link to="/event">Event</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/home">Home</Link>
-          <Link to="/rsvp">RSVP</Link>
-          <Button color="inherit">Login</Button>
+          <MenuItemWrapper>
+            <Link to="/event">
+              <Button color="inherit">Event</Button>
+            </Link>
+          </MenuItemWrapper>
+          <MenuItemWrapper>
+            <Link to="/gallery">
+              <Button color="inherit">Gallery</Button>
+            </Link>
+          </MenuItemWrapper>
+          <MenuItemWrapper>
+            <Link to="/home">
+              <Button color="inherit">Home</Button>
+            </Link>
+          </MenuItemWrapper>
+          <MenuItemWrapper>
+            <Link to="/rsvp">
+              <Button color="inherit">RSVP</Button>
+            </Link>
+          </MenuItemWrapper>
+          <MenuItemWrapper>
+            <Button color="inherit">
+              <Button color="inherit">Login</Button>
+            </Button>
+          </MenuItemWrapper>
         </Toolbar>
       </AppBar>
     </>
@@ -30,3 +49,7 @@ function App() {
 }
 
 export default App;
+
+const MenuItemWrapper = styled.div`
+  margin: 5px;
+`;
