@@ -1,3 +1,12 @@
-export default function Event() {
-  return <div>Event page</div>;
+import Header from "../Components/Header";
+
+function Event() {
+  return (
+    <>
+      <Header />
+      <>Event</>
+    </>
+  );
 }
+
+export default Event;

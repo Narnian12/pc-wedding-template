@@ -1,3 +1,12 @@
-export default function Gallery() {
-  return <div>Gallery page</div>;
+import Header from "../Components/Header";
+
+function Gallery() {
+  return (
+    <>
+      <Header />
+      <>Gallery</>
+    </>
+  );
 }
+
+export default Gallery;
